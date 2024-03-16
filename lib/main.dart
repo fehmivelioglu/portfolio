@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/managers/route_manager.dart';
 
 void main() => runApp(const MyApp());
 
@@ -7,16 +8,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
+    return MaterialApp.router(
+      title: 'Portfolio App',
+      debugShowCheckedModeBanner: false,
+      routerConfig: AppRouter().router,
     );
   }
 }
